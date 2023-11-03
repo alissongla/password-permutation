@@ -9,11 +9,6 @@ class PasswordValidator
         $this->password = $this->encryptPassword($password);
     }
 
-    private function encryptPassword($password)
-    {
-        return password_hash($password, PASSWORD_DEFAULT);
-    }
-
     public function validatePassword(array $inputs)
     {
         $possiblePasswords = $this->cartesianProduct($inputs);
@@ -28,7 +23,12 @@ class PasswordValidator
         return false;
     }
 
-    function cartesianProduct($arrays, $i = 0) {
+    private function encryptPassword($password)
+    {
+        return password_hash($password, PASSWORD_DEFAULT);
+    }
+
+    private function cartesianProduct($arrays, $i = 0) {
         if ($i == count($arrays)) {
             return array(array());
         }

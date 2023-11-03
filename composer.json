@@ -1,0 +1,21 @@
+{
+    "name": "alissongla/password-permutation",
+    "autoload": {
+        "psr-4": {
+            "Alissongla\\PasswordPermutation\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alisson Campos"
+        }
+    ],
+    "require-dev": {
+        "pestphp/pest": "^2.24"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
